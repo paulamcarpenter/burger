@@ -44,7 +44,7 @@ app.get("/", function(req, res) {
 
 // Create a new todo
 app.post("/todos", function(req, res) {
-  connection.query("INSERT INTO burgers (plan) VALUES (?)", [req.body.burgers], function(err, result) {
+  connection.query("INSERT INTO burgers (burgers) VALUES (?)", [req.body.burgers], function(err, result) {
     if (err) {
       return res.status(500).end();
     }
